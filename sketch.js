@@ -22,7 +22,7 @@ function setup() {
   magnitude = random(20, 100);
   wobble = random(0.001, 0.05);
   inc = random(0.01, 0.3);
-  scl = random(6, 13);
+  scl = random(3, 13);
   // random color
   col.r = random(150, 230);
   col.g = random(150, 230);
@@ -79,7 +79,7 @@ function mousePressed() {
   magnitude = random(20, 100);
   wobble = random(0.001, 0.05);
   inc = random(0.01, 0.3);
-  scl = random(6, 13);
+  scl = random(3, 13);
   // random color
   col.r = random(150, 230);
   col.g = random(150, 230);
