@@ -15,27 +15,27 @@ var col = {
 
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
-  frameRate(random(16, 33));
-
-  // randoms
-  amt = random(11111, 33333);
-  magnitude = random(20, 100);
-  wobble = random(0.001, 0.05);
-  inc = random(0.01, 0.3);
-  scl = random(3, 13);
-  // random color
-  col.r = random(150, 230);
-  col.g = random(150, 230);
-  col.b = random(150, 230);
-
-  cols = floor(width / scl);
-  rows = floor(height / scl);
-  flowfield = new Array(cols * rows);
-
-  for (var i = 0; i < amt; i++) {
-    particles[i] = new Particle();
-  }
-  background(col.r, col.g, col.b);
+  // frameRate(random(16, 60));
+  // 
+  // // randoms
+  // amt = random(11111, 33333);
+  // magnitude = random(20, 100);
+  // wobble = random(0.001, 0.05);
+  // inc = random(0.01, 0.3);
+  // scl = random(3, 13);
+  // // random color
+  // col.r = random(150, 230);
+  // col.g = random(150, 230);
+  // col.b = random(150, 230);
+  // 
+  // cols = floor(width / scl);
+  // rows = floor(height / scl);
+  // flowfield = new Array(cols * rows);
+  // 
+  // for (var i = 0; i < amt; i++) {
+  //   particles[i] = new Particle();
+  // }
+  // background(col.r, col.g, col.b);
 }
 
 function draw() {
@@ -72,18 +72,18 @@ function draw() {
 }
 
 function mousePressed() {
-  frameRate(random(16, 33));
+	frameRate(random(16,30));
 
   // randoms
-  amt = random(11111, 33333);
-  magnitude = random(20, 100);
-  wobble = random(0.001, 0.05);
-  inc = random(0.01, 0.3);
-  scl = random(3, 13);
+  // amt = random(11111, 33333);
+  magnitude = random(10, 40);
+  wobble = random(0.001, 0.09);
+  inc = random(0.01, 0.1);
+  scl = random(1, 20);
   // random color
-  col.r = random(150, 230);
-  col.g = random(150, 230);
-  col.b = random(150, 230);
+  col.r = random(166, 230);
+  col.g = random(166, 230);
+  col.b = random(166, 230);
 
   cols = floor(width / scl);
   rows = floor(height / scl);
@@ -92,5 +92,7 @@ function mousePressed() {
   for (var i = 0; i < amt; i++) {
     particles[i] = new Particle();
   }
-  background(col.r, col.g, col.b);
+	// background(20);
+	background(col.r, col.g, col.b);
+
 }
