@@ -77,9 +77,9 @@ function mousePressed() {
   // randoms
   // amt = random(11111, 33333);
   magnitude = random(10, 40);
-  wobble = random(0.001, 0.09);
+  wobble = random(0.001, 0.03);
   inc = random(0.01, 0.1);
-  scl = random(1, 20);
+  scl = random(1, 13);
   // random color
   col.r = random(166, 230);
   col.g = random(166, 230);
