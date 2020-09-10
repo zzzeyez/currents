@@ -15,8 +15,7 @@ var col = {
 
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
-  // background(33);
-  frameRate(30);
+  frameRate(random(16, 33));
 
   // randoms
   amt = random(11111, 33333);
@@ -73,18 +72,19 @@ function draw() {
 }
 
 function mousePressed() {
+  frameRate(random(16, 33));
+
   // randoms
   amt = random(11111, 33333);
   magnitude = random(20, 100);
-  wobble = random(0.001, 0.2);
-  inc = random(0.01, 0.1);
+  wobble = random(0.001, 0.05);
+  inc = random(0.01, 0.3);
   scl = random(6, 13);
   // random color
-  col.r = random(100, 230);
-  col.g = random(100, 230);
-  col.b = random(100, 230);
+  col.r = random(150, 230);
+  col.g = random(150, 230);
+  col.b = random(150, 230);
 
-	// force particles along forcefield
   cols = floor(width / scl);
   rows = floor(height / scl);
   flowfield = new Array(cols * rows);
@@ -92,6 +92,5 @@ function mousePressed() {
   for (var i = 0; i < amt; i++) {
     particles[i] = new Particle();
   }
-
   background(col.r, col.g, col.b);
 }
